@@ -20,14 +20,20 @@
                 path: "splash_animation.json" // Replace with the path to your animation JSON file
             });
             animation.addEventListener("complete", function () {
-                animation.stop();
+                setTimeout(function () {
+                    animation.stop();
+                    document.querySelector(".loading-animation").style.display = "none";
+                }, 2000); // Splash screen time in milliseconds (2 seconds)
             });
         });
     </script>
 </head>
 <body>
-    <!-- Lottie Animation Container -->
-    <div id="lottie-animation" class="loading-animation"></div>
+    <div class="loading-animation">
+        <!-- Lottie Animation Container -->
+        <div id="lottie-animation"></div>
+        <p class="custom-text">Liza Dialog Maker</p>
+    </div>
 
     <header>
         <h1>Welcome to My Website</h1>
@@ -47,6 +53,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #121212; /* Set a dark background color for the dark theme */
+    color: white; /* Set text color to white */
 }
 
 header {
@@ -72,6 +80,7 @@ footer {
     height: 100vh;
     background-color: #f2f2f2;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -79,6 +88,16 @@ footer {
     left: 0;
     z-index: 999;
     animation: fadeOut 2s ease-in-out 1s forwards;
+}
+
+#lottie-animation {
+    width: 150px; /* Customize the width */
+    height: 150px; /* Customize the height */
+}
+
+.custom-text {
+    margin-top: 10px;
+    font-size: 20px;
 }
 
 @keyframes fadeOut {
