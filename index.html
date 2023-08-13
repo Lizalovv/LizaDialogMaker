@@ -37,9 +37,9 @@
         <p class="custom-text">Liza Dialog Maker</p>
     </div>
 
-    <div class="header" id="myHeader">
+    <header
         <h2 style="font-family: 'Poppins', sans-serif;">Liza Dialog Maker</h2>
-    </div>
+    </header>
     <section>
         <h3 style="font-family: 'Poppins', sans-serif;">About Us</h3>
         <hr styel="width: 30%;">
@@ -62,32 +62,24 @@ body {
     color: white; /* Set text color to white */
 }
 
-.header {
-    background-color: #1e1e1f;
-    color: white;
-
+header {
+   
+    color: #FFFFFF;
     border-radius: 15px;
-    padding: 10px 16px;
+    text-align: center;
+    padding: 10px;
 }
 
 section {
     padding: 2rem;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 
-.sticky + section {
-  padding-top: 102px;
-}
 
     
 footer {
-    background-color: #1e1e1f;
-    color: white;
+    
+    color: #FFFFFF;
     text-align: center;
     padding: 1rem;
     justify-content: bottom;
@@ -133,18 +125,5 @@ footer {
     }
 }
 </style>
-<script>
-window.onscroll = function() {myFunction()};
 
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-</script>
 </html>
