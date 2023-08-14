@@ -25,7 +25,7 @@
                 setTimeout(function () {
                     animation.stop();
                     document.querySelector(".loading-animation").style.display = "none";
-                }, 2040); // Splash screen time in milliseconds (2 seconds)
+                }, 2050); // Splash screen time in milliseconds (2 seconds)
             });
         });
     </script>
@@ -38,11 +38,9 @@
     </div>
 
     <header class="navbar-fixed">
-        <nav class="blue darken-4">
+        <nav class="blue darken-4" style="background-color: #1F1F26;">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo center-align" style="font-family: 'Poppins', sans-serif;">Liza Dialog Maker</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
-                <a href="#" data-target="mobile-demo" class="sidenav-close hide-on-large-only"><i class="material-icons">close</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -54,6 +52,7 @@
     </header>
 
     <ul class="sidenav" id="mobile-demo">
+        <li><a href="#" class="sidenav-close">Close</a></li>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
@@ -72,7 +71,7 @@
         <p style="font-family: 'Poppins', sans-serif;font-size: 13px; color:#C7C9D3;">The Liza Dialog Maker Tool provides you with the capability to create custom alert dialogues according to your requirements. By using this tool, you can design specialized alert dialogues for your applications. You can configure the dialog's text, style, appearance, button layout, colors, and other options according to your preferences.<br><br>This tool assists you in designing and customizing custom alert dialog with ease, allowing you to address your users' concerns, provide suggestions, or present practical instructions. With the Liza Dialog Maker Tool, you can create interactive and visually appealing alert dialog for your projects, establishing effortless and effective communication with your users. Additionally, the tool offers the convenience of integrating and deploying the dialog into your applications, making it easy to incorporate them seamlessly.</p>
     </section>
 
-    <footer class="page-footer blue darken-4">
+    <footer class="page-footer blue darken-4" style="background-color: #1F1F26;">
         <div class="container">
             <p>&copy; 2023 Liza Dialog Maker</p>
         </div>
@@ -81,7 +80,7 @@
     <style>
         /* Your existing styles here */
         body.dark-theme {
-            background-color: #000000; /* AMOLED black background color */
+            background-color: #1F1F26; /* AMOLED black background color */
             color: white; /* Set text color to white */
         }
 
@@ -97,10 +96,14 @@
 
         .sidenav-trigger {
             color: white;
+            position: absolute;
+            top: 10px;
+            left: 10px;
         }
 
         .sidenav-close {
             color: white;
+            text-align: center;
         }
 
         section {
@@ -108,7 +111,7 @@
         }
 
         .liza {
-            background-color: #2C303A;
+            background-color: #1F1F26;
             padding: 10px;
             border-radius: 15px;
             margin-left: 12px;
@@ -166,12 +169,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.sidenav');
             var instances = M.Sidenav.init(elems);
-
-            // To close sidenav on clicking a link
-            document.querySelector('.sidenav').addEventListener('click', function() {
-                var instance = M.Sidenav.getInstance(document.querySelector('.sidenav'));
-                instance.close();
-            });
         });
     </script>
 </body>
