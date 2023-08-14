@@ -41,6 +41,7 @@
         <nav class="blue darken-4" style="background-color: #1F1F26;">
             <div class="nav-wrapper">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+                <a href="#" class="sidenav-close hide-on-large-only" style="position: absolute; top: 10px; right: 10px;"><i class="material-icons">close</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -52,7 +53,6 @@
     </header>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="#" class="sidenav-close">Close</a></li>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
@@ -88,6 +88,7 @@
             color: #FFFFFF;
             text-align: center;
             padding: 10px;
+            background-color: #1F1F26;
         }
 
         .nav-wrapper {
@@ -169,6 +170,12 @@
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.sidenav');
             var instances = M.Sidenav.init(elems);
+
+            // To close sidenav on clicking a link
+            document.querySelector('.sidenav').addEventListener('click', function() {
+                var instance = M.Sidenav.getInstance(document.querySelector('.sidenav'));
+                instance.close();
+            });
         });
     </script>
 </body>
