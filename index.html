@@ -25,12 +25,12 @@
                 setTimeout(function () {
                     animation.stop();
                     document.querySelector(".loading-animation").style.display = "none";
-                }, 2050); // Splash screen time in milliseconds (2 seconds)
+                }, 2040); // Splash screen time in milliseconds (2 seconds)
             });
         });
     </script>
 </head>
-<body>
+<body class="dark-theme">
     <div class="loading-animation">
         <!-- Lottie Animation Container -->
         <div id="lottie-animation"></div>
@@ -38,10 +38,11 @@
     </div>
 
     <header class="navbar-fixed">
-        <nav class="blue">
+        <nav class="blue darken-4">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo" style="font-family: 'Poppins', sans-serif;">Liza Dialog Maker</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#!" class="brand-logo center-align" style="font-family: 'Poppins', sans-serif;">Liza Dialog Maker</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-close hide-on-large-only"><i class="material-icons">close</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -71,7 +72,7 @@
         <p style="font-family: 'Poppins', sans-serif;font-size: 13px; color:#C7C9D3;">The Liza Dialog Maker Tool provides you with the capability to create custom alert dialogues according to your requirements. By using this tool, you can design specialized alert dialogues for your applications. You can configure the dialog's text, style, appearance, button layout, colors, and other options according to your preferences.<br><br>This tool assists you in designing and customizing custom alert dialog with ease, allowing you to address your users' concerns, provide suggestions, or present practical instructions. With the Liza Dialog Maker Tool, you can create interactive and visually appealing alert dialog for your projects, establishing effortless and effective communication with your users. Additionally, the tool offers the convenience of integrating and deploying the dialog into your applications, making it easy to incorporate them seamlessly.</p>
     </section>
 
-    <footer class="page-footer blue">
+    <footer class="page-footer blue darken-4">
         <div class="container">
             <p>&copy; 2023 Liza Dialog Maker</p>
         </div>
@@ -79,23 +80,26 @@
 
     <style>
         /* Your existing styles here */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #131417; /* Set a dark background color for the dark theme */
+        body.dark-theme {
+            background-color: #000000; /* AMOLED black background color */
             color: white; /* Set text color to white */
         }
 
         header {
             color: #FFFFFF;
-            border-radius: 15px;
             text-align: center;
             padding: 10px;
         }
 
+        .nav-wrapper {
+            justify-content: center;
+        }
+
         .sidenav-trigger {
+            color: white;
+        }
+
+        .sidenav-close {
             color: white;
         }
 
@@ -109,6 +113,7 @@
             border-radius: 15px;
             margin-left: 12px;
             margin-right: 12px;
+            text-align: center;
         }
 
         footer {
@@ -161,6 +166,12 @@
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.sidenav');
             var instances = M.Sidenav.init(elems);
+
+            // To close sidenav on clicking a link
+            document.querySelector('.sidenav').addEventListener('click', function() {
+                var instance = M.Sidenav.getInstance(document.querySelector('.sidenav'));
+                instance.close();
+            });
         });
     </script>
 </body>
