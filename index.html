@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Liza Dialog Maker</title>
     <!-- Add the Lottie Animation Library -->
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
     <script src="https://kit.fontawesome.com/b428873672.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,8 +41,7 @@
     <header class="navbar-fixed">
         <nav style="background-color: #1F1F26;">
             <div class="nav-wrapper">
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="fa-solid fa-ellipsis-stroke-vertical"></i></a>
-                <a href="#" class="sidenav-close hide-on-large-only" style="position: absolute; top: 10px; right: 10px;"><i class="fa-solid fa-xmark"></i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large" style="position: absolute; top: 10px; left: 10px;"><i class="fa-solid fa-ellipsis-stroke-vertical"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -55,7 +53,7 @@
     </header>
 
     <ul class="sidenav" id="mobile-demo" style="background-color: #2C303A;">
-        <li><a href="#">Home</a></li>
+        <li style="position: relative;"><a href="#"><i class="fa-solid fa-xmark" style="position: absolute; top: 10px; left: 10px;"></i>Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
@@ -91,26 +89,21 @@
             text-align: center;
             padding: 10px;
             background-color: #2C303A;
+            position: relative;
         }
 
         .nav-wrapper {
+            display: flex;
             justify-content: center;
+            align-items: center;
         }
 
         .sidenav-trigger {
             color: white;
-            
-            top: 10px;
+            position: absolute;
+            top: 50%;
             left: 10px;
-        }
-
-        .sidenav-close {
-            color: white;
-            text-align: center;
-        }
-
-        section {
-            padding: 2rem;
+            transform: translateY(-50%);
         }
 
         .liza {
