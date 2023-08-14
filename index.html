@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Liza Dialog Maker</title>
-
     <!-- Add the Lottie Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <!-- Add your animation JSON file -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -37,120 +37,131 @@
         <p class="custom-text">Liza Dialog Maker</p>
     </div>
 
-    <header>
-        <h2 style="font-family: 'Poppins', sans-serif;">Liza Dialog Maker</h2>
+    <header class="navbar-fixed">
+        <nav class="blue">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo" style="font-family: 'Poppins', sans-serif;">Liza Dialog Maker</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 
-<div class="liza">
-<p style="font-size:18px;">Liza Dialog Maker</p>
-    <p style="font-size:12px;">Version : 1.0 </p>
-   <Button style="background: #03AE12;width:80%;border-radius: 10px;font-size:18px;padding:10px;align-items: center;">Download</Button>
+    <div class="liza">
+        <p style="font-size:18px;">Liza Dialog Maker</p>
+        <p style="font-size:12px;">Version : 1.0 </p>
+        <Button style="background: #03AE12;width:80%;border-radius: 10px;font-size:18px;padding:10px;align-items: center;">Download</Button>
+    </div>
 
-</div>
-
-    
     <section>
-
-
-
-        
         <h3 style="font-family: 'Poppins', sans-serif;">About Us</h3>
-        
         <hr style="width:20%;border-width:20%;color:gray;align: left;background-color:#ff0000">
-
-        <p style="font-family: 'Poppins', sans-serif;font-size: 13px; color:#C7C9D3;">The Liza Dialog Maker Tool provides you with the capability to create custom alert dialogues according to your requirements. By using this tool, you can design specialized alert dialogues for your applications. You can configure the dialog's text, style, appearance, button layout, colors, and other options according to your preferences.<br><br>
-
-This tool assists you in designing and customizing custom alert dialog with ease, allowing you to address your users' concerns, provide suggestions, or present practical instructions. With the Liza Dialog Maker Tool, you can create interactive and visually appealing alert dialog for your projects, establishing effortless and effective communication with your users. Additionally, the tool offers the convenience of integrating and deploying the dialog into your applications, making it easy to incorporate them seamlessly.</p>
+        <p style="font-family: 'Poppins', sans-serif;font-size: 13px; color:#C7C9D3;">The Liza Dialog Maker Tool provides you with the capability to create custom alert dialogues according to your requirements. By using this tool, you can design specialized alert dialogues for your applications. You can configure the dialog's text, style, appearance, button layout, colors, and other options according to your preferences.<br><br>This tool assists you in designing and customizing custom alert dialog with ease, allowing you to address your users' concerns, provide suggestions, or present practical instructions. With the Liza Dialog Maker Tool, you can create interactive and visually appealing alert dialog for your projects, establishing effortless and effective communication with your users. Additionally, the tool offers the convenience of integrating and deploying the dialog into your applications, making it easy to incorporate them seamlessly.</p>
     </section>
-    <footer>
-        <p>&copy; 2023 Liza Dialog Maker</p>
+
+    <footer class="page-footer blue">
+        <div class="container">
+            <p>&copy; 2023 Liza Dialog Maker</p>
+        </div>
     </footer>
+
+    <style>
+        /* Your existing styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #131417; /* Set a dark background color for the dark theme */
+            color: white; /* Set text color to white */
+        }
+
+        header {
+            color: #FFFFFF;
+            border-radius: 15px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .sidenav-trigger {
+            color: white;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        .liza {
+            background-color: #2C303A;
+            padding: 10px;
+            border-radius: 15px;
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+
+        footer {
+            color: #FFFFFF;
+            text-align: center;
+            justify-content: bottom;
+        }
+
+        .loading-animation {
+            width: 100%;
+            height: 100vh;
+            background-color: #1c1c1c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            animation: fadeOut 2s ease-in-out 2.3s forwards;
+        }
+
+        #lottie-animation {
+            width: 230px; /* Customize the width */
+            height: 230px; /* Customize the height */
+            margin-top: 200px;
+            justify-content: top;
+        }
+
+        .custom-text {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: top;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+                display: none;
+            }
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
 </body>
-
-<style>
-/* Your existing styles here */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #131417; /* Set a dark background color for the dark theme */
-    color: white; /* Set text color to white */
-}
-
-header {
-   
-    color: #FFFFFF;
-    border-radius: 15px;
-    text-align: center;
-    padding: 10px;
-}
-
-section {
-    padding: 2rem;
-}
-
-
-
-    .liza {
-    background-color: #2C303A;
-        padding: 10px;
-        border-radius: 15px;
-        margin-left: 12px;
-        margin-right: 12px;
-        
-    }
-footer {
-   
-    color: #FFFFFF;
-    text-align: center;
-    
-    
-    
-    
-    justify-content: bottom;
-}
-
-.loading-animation {
-    width: 100%;
-    height: 100vh;
-    background-color: #1c1c1c;
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    animation: fadeOut 2s ease-in-out 2.3s forwards;
-}
-
-#lottie-animation {
-    width: 230px; /* Customize the width */
-    height: 230px; /* Customize the height */
-    margin-top: 200px;
-    justify-content: top;
-}
-
-.custom-text {
-    margin-top: 30px;
-    font-size: 20px;
-    color: #ffffff;
-    
-    text-align: top;
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-        display: none;
-    }
-}
-</style>
-
 </html>
