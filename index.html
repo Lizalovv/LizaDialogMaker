@@ -1,244 +1,166 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- css -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <!-- icon -->
-    <script src="https://kit.fontawesome.com/235004aab8.js" crossorigin="anonymous"></script>
-    <title>Personal Website Template</title>
-
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Liza Dialog Maker</title>
+    <!-- Add the Lottie Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script src="https://kit.fontawesome.com/b428873672.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <!-- Add your animation JSON file -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var animation = lottie.loadAnimation({
+                container: document.getElementById("lottie-animation"),
+                renderer: "svg",
+                loop: false,
+                autoplay: true,
+                path: "splash_animation.json" // Replace with the path to your animation JSON file
+            });
+            animation.addEventListener("complete", function () {
+                setTimeout(function () {
+                    animation.stop();
+                    document.querySelector(".loading-animation").style.display = "none";
+                }, 2050); // Splash screen time in milliseconds (2 seconds)
+            });
+        });
+    </script>
 </head>
-<body>
-
-           
-    <div class="main_content">
-      <div class="about" id="center_content">
-        <h3>Welcome</h3>
-        <p>About Me.</p>
-        <div>
-          <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            </p>
-        </div>
-                <div>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Iste velit consequuntur quaerat impedit possimus
-                    harum cum vero iusto saepe excepturi necessitatibus nostrum hic,
-                    sed perspiciatis fugiat accusamus architecto suscipit quam.
-                  </p>
-                </div>
-      </div>
-            
-                        
-                              
-                            
-             
-    
-          <footer>
-            <p>Made By <a href="https://www.facebook.com/profile.php?id=100023113453986">Liza lovv</a></p>
-          </footer>
+<body class="dark-theme">
+    <div class="loading-animation">
+        <!-- Lottie Animation Container -->
+        <div id="lottie-animation"></div>
+        <p class="custom-text">Liza Dialog Maker</p>
     </div>
+
+    <header>
+        <h3>Liza Dialog Maker</h3>
+    </header>
+            
+    <div class="liza">
+        <p style="font-size:18px;">Liza Dialog Maker</p>
+        <p style="font-size:12px;">Version : 1.0 </p>
+        <Button style="background: #03AE12;width:80%;border-radius: 10px;font-size:18px;padding:10px;align-items: center;">Download</Button>
+    </div>
+
+    <section>
+        <h5 style="font-family: 'Poppins', sans-serif;">About</h5>
+        <hr style="width:20%;border-width:20%;color:gray;align: left;background-color:#ff0000">
+        <p style="font-family: 'Poppins', sans-serif;font-size: 13px; color:#C7C9D3;">The Liza Dialog Maker Tool provides you with the capability to create custom alert dialogues according to your requirements. By using this tool, you can design specialized alert dialogues for your applications. You can configure the dialog's text, style, appearance, button layout, colors, and other options according to your preferences.<br><br>This tool assists you in designing and customizing custom alert dialog with ease, allowing you to address your users' concerns, provide suggestions, or present practical instructions. With the Liza Dialog Maker Tool, you can create interactive and visually appealing alert dialog for your projects, establishing effortless and effective communication with your users. Additionally, the tool offers the convenience of integrating and deploying the dialog into your applications, making it easy to incorporate them seamlessly.</p>
+    </section>
+
+    <footer style="background-color: #1F1F26;">
+        <div class="container">
+            <p>&copy; 2023 Liza Dialog Maker</p>
+        </div>
+    </footer>
+
+    <style>
+        /* Your existing styles here */
+        body.dark-theme {
+            background-color: #1F1F26; /* AMOLED black background color */
+            color: white; /* Set text color to white */
+        }
+
+        header {
+            color: #FFFFFF;
+            text-align: center;
+            padding: 5px;
+            background-color: #2C303A;
+            
+            width: 100%
+            
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .sidenav-trigger {
+            color: white;
+            position: absolute;
+            top: 20%;
+            left: 10px;
+            transform: translateY(0%);
+        }
+
+        .liza {
+            background-color: #2C303A;
+            padding: 10px;
+            border-radius: 15px;
+            margin-left: 12px;
+            margin-right: 12px;
+            text-align: center;
+        }
+section {
+
+padding: 2rem;
+}
+        footer {
+            color: #FFFFFF;
+            text-align: center;
+            justify-content: bottom;
+        }
+
+        .loading-animation {
+            width: 100%;
+            height: 100vh;
+            background-color: #1c1c1c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            animation: fadeOut 2s ease-in-out 2.3s forwards;
+        }
+
+        #lottie-animation {
+            width: 230px; /* Customize the width */
+            height: 230px; /* Customize the height */
+            margin-top: 200px;
+            justify-content: top;
+        }
+
+        .custom-text {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: top;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+                display: none;
+            }
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+
+            // To close sidenav on clicking a link
+            document.querySelector('.sidenav').addEventListener('click', function() {
+                var instance = M.Sidenav.getInstance(document.querySelector('.sidenav'));
+                instance.close();
+            });
+        });
+    </script>
 </body>
-
-<style>
-
-
-body, div, h1, h2, ul, li, i, a, p, h3, footer {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-body {
-    background: #1F1F26;
-    
-    
-    
-    font-family: 'Poppins', sans-serif;
-    color: white;
-}
-
-/* scorll */
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #121212;
-}
-
-/* scorll */
-
-body a {
-    color: white;
-     text-decoration: none;
-
-     
-}
-
-body ul li {
-       list-style:none;
-    margin-top: 10px;
-}
-
-p {
-    font-size: 55px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-#center_content {
-      padding-left: 60px;
-}
-
-
-.info_div {
-   position: fixed;
-   width: 30%;
-   height: 100%;
-   overflow: hidden;
-}
-
-
-.profile_info {
-    text-align: left;
-    margin-top: 120px;
-}
-
-.profile_info img {
-margin-left: 20px;
-}
-
-.profile_info h1 {
-    font-size: 30px;
-    margin-left: 30px;
-}
-
-.profile_info h2 {
-    margin-left: 30px;
-    font-size: 20px;
-}
-
-
-.profile_info h2 a:hover{
-    text-decoration: underline;
-}
-
-.icon {
-    margin-top: 25px;
-    margin-left: 30px;
-}
-
-
-
-.icon ul li i {
-    text-shadow: 1px 1px 1px #ccc;
-    font-size: 20px;
-    padding-right:10px;
-}
-
-.icon ul li a {
-     font-size: 20px;
-}
-
-.social_link {
-    text-align: center;
-    margin-top: 70px;
-        font-size: 25px;
-}
-.social_link a {
-   margin: 0 40px 0 0;
-}
-
-.main_content {
-   
-    
-    
-    
-}
-
-
-.about h3 {
-    padding-top: 110px;
-}
-
-.about div {
-    height: 100%;
-    width: 100%;
-    border-radius:0.5em;
-    background-color: #121212;
-}
-
-.about div p {
-    font-size: 20px;
-    margin: 20px 20px 20px 20px;
-}
-
-.skills ul {
-    height: 100%;
-    width: 60%;
-    border-radius:0.5em;
-    background-color: #121212;
-        padding-bottom: 5px;
-
-}
-.skills ul li {
-    font-size: 20px;
-    margin: 20px 20px 20px 20px;
-    
-}
-.skills ul li:first-child {
-        padding-top: 20px;
-}
-
-.products div {
-
-    height: 100%;
-    width: 90%;
-    border-radius:0.5em;
-    background-color: #121212;
-}
-
-.products div p {
-        font-size: 20px;
-        margin: 20px 20px 20px 20px;
-}
-
-
-
-.contact ul {
-    height: 100%;
-    width: 30%;
-    border-radius:0.5em;
-    background-color: #121212;
-     padding-bottom: 5px;
-
-}
-
-.contact ul li {
-    font-size: 20px;
-    margin: 20px 20px 20px 20px;
-    
-}
-.contact ul li:first-child {
-        padding-top: 20px;
-}
-
-footer p {
-    text-align: center;
-    font-size: 15px;
-    margin-top: 40px;
-}
-
-
-    
-</style>
-
-    
 </html>
