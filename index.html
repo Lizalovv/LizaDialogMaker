@@ -46,7 +46,7 @@
 
 <br>
                 <br>
-<button class="button-40" role="button">
+<button class="button-40" role="button" onclick="openUrl()">
   <span class="text">Download</span>
 </button>
                 
@@ -79,7 +79,15 @@
             </ul>
     </div >
 
+    <script>
+  function openUrl() {
+    // Replace "your_url_here" with the actual URL you want to open
+    var url = "https://telegram.me/lizamods";
     
+    // Open the URL in a new tab/window
+    window.open(url, "_blank");
+  }
+</script>
 
     <style>
         /* Your existing styles here */
