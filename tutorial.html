@@ -59,8 +59,10 @@
 
                         // Embed YouTube video using iframe
                         const iframe = document.createElement('iframe');
-                        iframe.src = `https://www.youtube.com/embed/${videoId}`;
+                        iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0`;
                         iframe.frameborder = 0;
+                        iframe.controls = 0;
+                        iframe.modestbranding = 1;
                         iframe.allowfullscreen = true;
 
                         // Display video title
