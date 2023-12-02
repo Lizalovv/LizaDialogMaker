@@ -21,22 +21,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
             margin-top: 20px;
         }
 
-        .video-wrapper {
-            max-width: 800px;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive sizing */
-        }
-
         iframe {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            width: 80%;
+            max-width: 800px;
+            height: 450px;
         }
 
         h3 {
@@ -45,8 +37,7 @@
     </style>
 </head>
 <body>
-    <h1>Dialogs Pro Tutorials</h1>
-
+    <h1>YouTube Tutorials</h1>
     <div id="videos-container"></div>
 
     <script>
@@ -77,6 +68,7 @@
                         titleElement.textContent = title;
 
                         // Append video iframe and title to the container
+                        videoWrapper.appendChild(titleElement);
                         videoWrapper.appendChild(iframe);
                         videosContainer.appendChild(videoWrapper);
                     });
