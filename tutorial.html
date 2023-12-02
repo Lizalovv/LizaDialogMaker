@@ -25,23 +25,40 @@
             margin-top: 20px;
         }
 
-        iframe {
+        .video-wrapper {
             width: 80%;
             max-width: 800px;
+        }
+
+        iframe {
+            width: 100%;
             height: 450px;
         }
 
         h3 {
             color: #333;
         }
+
+        #subscribe-button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #FF0000;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <h1>YouTube Tutorials</h1>
     <div id="videos-container"></div>
+    <a id="subscribe-button" href="https://www.youtube.com/channel/UCDHrCLG4Md2B1gwUeG9fcpA" target="_blank">Subscribe</a>
 
     <script>
-        const apiKey = "AIzaSyAOqPPtGSL6bKe-YfKczYE9TrXRk4WCy7w";
+        const apiKey = "YOUR_API_KEY";
         const channelId = "UCDHrCLG4Md2B1gwUeG9fcpA";
 
         function fetchVideos() {
