@@ -25,11 +25,18 @@
             margin-top: 20px;
         }
 
-        iframe {
+        .video-wrapper {
             max-width: 800px;
             width: 100%;
-            height: 0;
+            position: relative;
+            overflow: hidden;
             padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive sizing */
+        }
+
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
         }
 
         h3 {
@@ -70,7 +77,6 @@
                         titleElement.textContent = title;
 
                         // Append video iframe and title to the container
-                        videoWrapper.appendChild(titleElement);
                         videoWrapper.appendChild(iframe);
                         videosContainer.appendChild(videoWrapper);
                     });
